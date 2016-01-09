@@ -48,6 +48,7 @@ gem 'debugger', group: [:development, :test]
 
 # Auth
 gem 'devise'
+gem 'devise_token_auth'
 gem 'omniauth'
 
 # Facebook Auth
@@ -59,6 +60,8 @@ gem 'koala', '~> 2.2'
 # For APIs
 gem 'grape', '~> 0.9.0'
 gem 'grape-jbuilder'
+gem 'rack-jsonp-middleware'
+gem 'rack-contrib'
 group :development, :test do
   gem 'json_expressions'
 end
@@ -69,6 +72,9 @@ gem 'meta-tags', :require => 'meta_tags'
 
 # Google Analytics
 gem 'google-analytics-rails'
+
+# Paging
+gem 'kaminari'
 
 group :development, :test do
   gem 'byebug'

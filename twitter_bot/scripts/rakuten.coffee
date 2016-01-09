@@ -26,7 +26,8 @@ module.exports = (robot) ->
     async.series({
       search: (callback) ->
         rakutenUrl = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?format=json'
-        rakutenUrl += '&affiliateId=' + affiliateId + '&applicationId=' + applicationId
+#        rakutenUrl += '&affiliateId=' + affiliateId + '&applicationId=' + applicationId
+        rakutenUrl += '&applicationId=' + applicationId
         searchWord = random searchWordArray
         rakutenUrl += '&keyword=' + encodeURIComponent(searchWord)
         rakutenUrl += '&sort=' + encodeURIComponent(random sortArray)
@@ -37,7 +38,7 @@ module.exports = (robot) ->
           console.log("value: #{value}")
           item_price  = "お買い得！" + body.Items[value].Item.itemPrice + "円"
           catch_copy  = body.Items[value].Item.catchcopy.substring(0, 30)
-          afl_url     = body.Items[value].Item.affiliateUrl
+          afl_url     = body.Items[value].Item.itemUrl
           image_url_1 = body.Items[value].Item.mediumImageUrls[0].imageUrl
           image_url_2 = if body.Items[value].Item.mediumImageUrls[1] then body.Items[value].Item.mediumImageUrls[1].imageUrl else ''
           request.get(image_url_1)

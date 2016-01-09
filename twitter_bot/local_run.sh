@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export HUBOT_TWITTER_KEY="9s14KHqUPMIn6E4dsULmCf7Wx"
-export HUBOT_TWITTER_SECRET="lGwtw8nrQTh8HU0sC7xrxJaGDIri7QEMLZyPvvnGWYk7i2uYyS"
-export HUBOT_TWITTER_TOKEN="3546734059-ajH8CjAdsTBWdhrTnhdgOGlrfSg01HnQOGk0b2d"
-export HUBOT_TWITTER_TOKEN_SECRET="fuk1fKZiqB8jCkx9IDGOa4XgKFCYJk4nguFLDshn3CX6E"
+export HUBOT_TWITTER_KEY="zENJLaNeMcce1gP81myR3CylU"
+export HUBOT_TWITTER_SECRET="tVBbU6gLowCMuXDK2UtW6mrCAKGW6FRCpwa6oCrQytlMYgp7Pu"
+export HUBOT_TWITTER_TOKEN="3546734059-8oH7iEoTfmo1Cf4dO6zOF1MzAhOBk65y4rfsp7e"
+export HUBOT_TWITTER_TOKEN_SECRET="5A2fX1RGSZNoSt3VTsVWjIgHLecSFXdz0ToopPsXjVsuS"
 
 forever start -c coffee node_modules/.bin/hubot -a twitter-userstream -n coneco_cat

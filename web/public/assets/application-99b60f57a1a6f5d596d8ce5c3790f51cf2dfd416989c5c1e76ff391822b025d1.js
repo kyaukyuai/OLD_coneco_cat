@@ -14014,10 +14014,12 @@ var get_rakuten_pics = function() {
   var affiliateId     = '0e2a74f8.b705f347.0e2a74f9.ce1173da';
   var applicationId   = 'bfc5bca21a7bac85a197a29ebeab80dd';
   var rakutenUrl = 'https://app.rakuten.co.jp/services/api/IchibaItem/Search/20140222?format=json';
-  rakutenUrl += '&affiliateId=' + affiliateId + '&applicationId=' + applicationId;
+  //rakutenUrl += '&affiliateId=' + affiliateId + '&applicationId=' + applicationId;
+  rakutenUrl += '&applicationId=' + applicationId;
   var searchWord = shuffle_array(searchWordArray)[0];
   rakutenUrl += '&keyword=' + encodeURIComponent(searchWord);
   rakutenUrl += '&sort=' + encodeURIComponent(shuffle_array(sortArray)[0]);
+  console.log(rakutenUrl);
   var deferred = $.ajax({
     url     : rakutenUrl,
     type    : 'GET',
@@ -14033,12 +14035,12 @@ var set_rakuten_pics = function() {
         var item = String();
         var imageUrl = pic.Item.mediumImageUrls[0].imageUrl.replace(/128x128/g, '512x512');
         item += "<div class='item'>";
-        item += "<a href='" + pic.Item.affiliateUrl + "' data-lightbox-gallery='gallery1' target='_blank'>";
+        item += "<a href='" + pic.Item.itemUrl + "' data-lightbox-gallery='gallery1' target='_blank'>";
         item += "<img src='" + imageUrl + "' class='img-responsive img-round' alt='img'>";
         item += "</a>";
         item += "<p class='text-black'><B>" + pic.Item.itemName + "</B></p>";
         item += "<p class='text-black'><I>" + pic.Item.itemPrice.toLocaleString() + " 円</I></p>";
-        item += "<a href='" + pic.Item.affiliateUrl + "' class='btn btn-skin btn-lg btn-scroll text-white'><B>もっと見る</B></a>";
+        item += "<a href='" + pic.Item.itemUrl + "' class='btn btn-skin btn-lg btn-scroll text-white'><B>もっと見る</B></a>";
         item += "</div>";
         $('#rakuten-owl-works').append(item);
       });
