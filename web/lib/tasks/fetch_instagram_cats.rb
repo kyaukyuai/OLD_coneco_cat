@@ -31,9 +31,9 @@ class Tasks::FetchInstagramCats
       results['data'].each do |item|
         InstagramCat.find_or_create_by(instagram_id: item['id']) do |instagram_cat|
           instagram_cat.instagram_id = item['id']
-          instagram_cat.text         = item['caption']['text'].encode('utf-8')
-          instagram_cat.image_url    = item['images']['standard_resolution']['url']
-          instagram_cat.tags         = item['tags'].join(',').encode('utf-8')
+          instagram_cat.text         = (item.has_key?('caption') and item['caption'].has_key?('text')) ? item['caption']['text'] : ''
+          instagram_cat.image_url    = (item.has_key?('images') and item['images'].has_key?('standard_resolution')) ? item['images']['standard_resolution']['url'] : ''
+          instagram_cat.tags         = item['tags'].join(',')
           instagram_cat.userid       = item['user']['id']
           instagram_cat.username     = item['user']['username']
           instagram_cat.userpic      = item['user']['profile_picture']

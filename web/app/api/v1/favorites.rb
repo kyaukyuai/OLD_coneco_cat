@@ -17,7 +17,7 @@ module V1
       params do
         requires :cat_id, type: Integer, desc: 'Cat ID'
       end
-      post do
+      get do
         authenticate!
         Favorite.create(user_id: current_user.id, cat_id: params[:cat_id])
         status 201

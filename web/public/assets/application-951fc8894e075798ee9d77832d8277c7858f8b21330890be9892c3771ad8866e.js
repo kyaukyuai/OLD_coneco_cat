@@ -14019,7 +14019,6 @@ var get_rakuten_pics = function() {
   var searchWord = shuffle_array(searchWordArray)[0];
   rakutenUrl += '&keyword=' + encodeURIComponent(searchWord);
   rakutenUrl += '&sort=' + encodeURIComponent(shuffle_array(sortArray)[0]);
-  console.log(rakutenUrl);
   var deferred = $.ajax({
     url     : rakutenUrl,
     type    : 'GET',
