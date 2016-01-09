@@ -263,7 +263,7 @@ hr {
 ============================ */
 
 .home-section {
-  padding-top: 150px;
+  padding-top: 30px;
   padding-bottom: 20px;
   display:block;
   position:relative;
@@ -271,7 +271,7 @@ hr {
 }
 
 .section-heading {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .section-heading h2 {
