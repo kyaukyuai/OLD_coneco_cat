@@ -328,8 +328,7 @@ hr {
 }
 
 .img-round {
-  border-radius: 10px;
-  border: 2px solid #fff;
+  border-radius: 5px;
 }
 
 .glyphicon-home {
