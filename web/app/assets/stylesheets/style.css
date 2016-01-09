@@ -263,7 +263,7 @@ hr {
 ============================ */
 
 .home-section {
-  padding-top: 150px;
+  padding-top: 70px;
   padding-bottom: 20px;
   display:block;
   position:relative;
@@ -318,8 +318,7 @@ hr {
 }
 
 .img-rakuten {
-  border-radius: 50%;
-  border: 2px solid #fff;
+  border-radius: 20%;
 }
 
 .img-flickr {
@@ -328,8 +327,7 @@ hr {
 }
 
 .img-round {
-  border-radius: 10px;
-  border: 2px solid #fff;
+  border-radius: 5px;
 }
 
 .glyphicon-home {
