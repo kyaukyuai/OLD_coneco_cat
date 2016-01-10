@@ -1,0 +1,10 @@
+machine:
+  timezone:
+    Asia/Tokyo
+  ruby:
+    version: 2.0.0
+deployment:
+  production:
+    branch: master
+    commands:
+      - ./deploy_prod.sh
