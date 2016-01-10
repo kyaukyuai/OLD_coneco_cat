@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
+  # mount_devise_token_auth_for 'User', at: 'auth'
   # devise_for :users
-  devise_for :users, :controllers => {
-    :sessions      => "users/sessions",
-    :registrations => "users/registrations",
-    :passwords     => "users/passwords",
-    :omniauth_callbacks => "users/omniauth_callbacks"
-  }
+  #devise_for :users, :controllers => {
+  #  :sessions      => "users/sessions",
+  #  :registrations => "users/registrations",
+  #  :passwords     => "users/passwords",
+  #  :omniauth_callbacks => "users/omniauth_callbacks"
+  #}
   get 'welcome/index'
 
   get 'welcome/show'
@@ -18,8 +19,13 @@ Rails.application.routes.draw do
 
   # For APIs
   Rails.application.routes.draw do
+  #  mount_devise_token_auth_for 'User', at: 'auth'
     mount API => '/'
   end
+  #namespace :api do
+  mount_devise_token_auth_for 'User', at: 'api/v1/auth'
+  #  mount API => '/'
+  #end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

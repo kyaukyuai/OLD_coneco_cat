@@ -66,7 +66,7 @@
                           <h3 class="modal-title">会員登録</h3>
                         </div><!-- /modal-header -->
                         <div class="modal-body fb-body">
-                          <%= link_to "Facebookで登録する", user_omniauth_authorize_path(:facebook), :class => 'btn btn-info fb' %>
+                          <%= link_to "Facebookで登録する", 'api/v1/auth/facebook?auth_origin_url=https%3A%2F%2Fconeco.cat2.pics%2F', :class => 'btn btn-info fb' %>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
@@ -87,7 +87,7 @@
                           <h3 class="modal-title">ログイン</h3>
                         </div><!-- /modal-header -->
                         <div class="modal-body fb-body">
-                          <%= link_to "Facebookでログイン", user_omniauth_authorize_path(:facebook), :class => 'btn btn-info fb' %>
+                          <%= link_to "Facebookでログイン", 'api/v1/auth/facebook?auth_origin_url=http://yuya.kakui.name:5000/', :class => 'btn btn-info fb' %>
                         </div>
                         <div class="modal-footer">
                           <button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
