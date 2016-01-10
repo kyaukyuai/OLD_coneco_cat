@@ -263,7 +263,7 @@ hr {
 ============================ */
 
 .home-section {
-  padding-top: 70px;
+  padding-top: 20px;
   padding-bottom: 20px;
   display:block;
   position:relative;
@@ -271,7 +271,7 @@ hr {
 }
 
 .section-heading {
-  margin-bottom: 50px;
+  margin-bottom: 10px;
 }
 
 .section-heading h2 {
@@ -281,6 +281,11 @@ hr {
 }
 .section-heading i {
   margin-bottom: 20px;
+}
+.section-heading p{
+  font-size : 20px;
+  color : black; 
+
 }
 
 /* --- section bg var --- */

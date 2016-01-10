@@ -175,20 +175,20 @@
   <!-- /Section: separator -->
 
   <!-- Section: gallery -->
-  <section id="instagram" class="home-section text-center bg-instagram">
+  <section id="instagram" class="home-section text-left bg-instagram">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="wow bounceInDown" data-wow-delay="0.4s">
-            <div class="section-heading">
+            <div class="section-heading" class="navbar-toggle" data-toggle="collapse" data-target="#ghost_area_instagram">
               <!--h2><%#= image_tag 'i.png', :height => '50', :class => 'img-rakuten' %>INSTAGRAM</h2-->
-              <%= image_tag 'i.png', :height => '60', :class => 'img-rakuten' %>
+              <%= image_tag 'i.png', :height => '60', :class => 'img-rakuten' %><p>INSTAGRAM</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container collapse" id="ghost_area_instagram">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12" >
           <div class="wow bounceInUp" data-wow-delay="0.4s">
@@ -201,20 +201,20 @@
   <!-- /Section: services -->
 
   <!-- Section: gallery -->
-  <section id="rakuten" class="home-section text-center bg-rakuten">
+  <section id="rakuten" class="home-section text-left bg-rakuten">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="wow bounceInDown" data-wow-delay="0.4s">
-            <div class="section-heading">
+            <div class="section-heading" class="navbar-toggle" data-toggle="collapse" data-target="#ghost_area_rakuten">
               <!--h2><%#= image_tag 'r.jpg', :height => '50', :class => 'img-rakuten' %>RAKUTEN</h2-->
-              <%= image_tag 'r.jpg', :height => '60', :class => 'img-rakuten' %>
+              <%= image_tag 'r.jpg', :height => '60', :class => 'img-rakuten' %><p>RAKUTEN</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container collapse" id="ghost_area_rakuten">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12" >
           <div class="wow bounceInUp" data-wow-delay="0.4s">
@@ -225,22 +225,24 @@
     </div>
   </section>
   <!-- /Section: services -->
+  
+
+<section  class="home-section text-left bg-flickr">
 
   <!-- Section: gallery -->
-  <section id="flickr" class="home-section text-center bg-flickr">
-    <div class="container">
+    <div class="container" id="flickr">
       <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
           <div class="wow bounceInDown" data-wow-delay="0.4s">
-            <div class="section-heading">
+            <div class="section-heading" class="navbar-toggle" data-toggle="collapse" data-target="#ghost_area_flickr">
               <!--h2><%#= image_tag 'f.png', :height => '50', :class => 'img-rakuten' %>FLICKR</h2-->
-              <%= image_tag 'f.png', :height => '60', :class => 'img-rakuten' %>
+              <%= image_tag 'f.png', :height => '60', :class => 'img-rakuten' %><p>FLICKR</p>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="container">
+    <div class="container collapse" id="ghost_area_flickr">
       <div class="row">
         <div class="col-sm-12 col-md-12 col-lg-12" >
           <div class="wow bounceInUp" data-wow-delay="0.4s">
